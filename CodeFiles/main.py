@@ -80,6 +80,19 @@ class Cat:
 
     def meow(self):
         print(self.name, 'says, "Meow"')
+class ShowDog(Dog):
+    def __init__(self, name, age, weight, handler):
+        Dog.__init__(self, name, age, weight)
+        self.handler = handler
+
+    def trot(self):
+        print(self.name, "is trotting")
+
+    def jump(self):
+        print(self.name, "is jumping")
+
+
+
 class HotDog:
     def __init__(self, calories):
         self.calories = calories
@@ -193,9 +206,5 @@ def test_code():
     hotel.walking_service()
 
 
-
-
 if __name__ == '__main__':
     test_code()
-
-
